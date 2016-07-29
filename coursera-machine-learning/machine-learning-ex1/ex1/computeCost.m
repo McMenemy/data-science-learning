@@ -12,10 +12,9 @@ J = 0;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
-
-
-
-
+m = length(X(:, 1));
+h = theta(1) * X(:, 1) + theta(2) * X(:, 2);
+J = sum((h - y).^2) / (2 * m); 
 
 % =========================================================================
 
