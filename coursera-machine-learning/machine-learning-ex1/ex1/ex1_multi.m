@@ -1,11 +1,4 @@
-%% Machine Learning Online Class
-%  Exercise 1: Linear regression with multiple variables
-%
-%  Instructions
-%  ------------
-% 
-%  This file contains code that helps you get started on the
-%  linear regression exercise. 
+%% Machine Learning Online Class %  Exercise 1: Linear regression with multiple variables % %  Instructions %  ------------ % %  This file contains code that helps you get started on the %  linear regression exercise. 
 %
 %  You will need to complete the following functions in this 
 %  exericse:
@@ -88,8 +81,7 @@ num_iters = 400;
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
-theta1 = zeros(3, 1);
-alpha1 = 0.033;
+theta1 = zeros(3, 1); alpha1 = 0.033;
 [theta1, J_history1] = gradientDescentMulti(X, y, theta1, alpha1, num_iters);
 theta2 = zeros(3, 1);
 alpha2 = 0.1;
@@ -115,7 +107,11 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
+MU = [2000.6809, 3.1702];
+SIGMA = [794.70235, 0.76098];
+X_sp = [(1650.0 - 2000.6809) / 794.70235, (3.0 - 3.1702) / 0.76098];
+theta_sp = [334302.063993, 100087.116006, 3673.54851];
+price = theta_sp(1) + theta_sp(2) * X_sp(1) + theta_sp(3) * X_sp(2); % You should change this
 
 
 % ============================================================
