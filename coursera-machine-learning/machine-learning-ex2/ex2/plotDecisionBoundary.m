@@ -26,6 +26,7 @@ if size(X, 2) <= 3
     legend('Admitted', 'Not admitted', 'Decision Boundary')
     axis([30, 100, 30, 100])
 else
+	fprintf('Countour plotting...\n');
     % Here is the grid range
     u = linspace(-1, 1.5, 50);
     v = linspace(-1, 1.5, 50);
